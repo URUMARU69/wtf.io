@@ -32,7 +32,6 @@ function updateContentByLanguage(lang) {
         
         if (langElement) langElement.textContent = 'Language';
         if (settElement) settElement.textContent = 'Settings';
-        if (titleElement) titleElement.textContent = 'Language';
         if (themElement) themElement.textContent = 'Theme';
         if (rankElement) rankElement.textContent = 'Ranking';
         if (taskElement) taskElement.textContent = 'Tasks';
