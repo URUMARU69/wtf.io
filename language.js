@@ -10,7 +10,6 @@ function changeLanguage(lang) {
 function updateContentByLanguage(lang) {
     let langElement = document.querySelector('.lang');
     let settElement = document.querySelector('.sett');
-    let titleElement = document.querySelector('.title');
     let themElement = document.querySelector('.them');
     let rankElement = document.querySelector('.rank');
     let taskElement = document.querySelector('.task');
@@ -21,7 +20,6 @@ function updateContentByLanguage(lang) {
         
         if (langElement) langElement.textContent = 'Язык';
         if (settElement) settElement.textContent = 'Настройки';
-        if (titleElement) titleElement.textContent = 'Язык';
         if (themElement) themElement.textContent = 'Тема';
         if (rankElement) rankElement.textContent = 'Рейтинг';
         if (taskElement) taskElement.textContent = 'Задания';
