@@ -1,7 +1,11 @@
 // const TelegramBot = require
 // const token = 8153323505:AAG8RxljKPRcPN8VzTwp9G5InR0iBhSzwFQ;
 // const bot = new TelegramBot(token, {polling: true})
-const button = document.getElementById('tap');
+document.addEventListener('contextmenu', function (e) {
+    e.preventDefault();
+});
+
+const button = document.getElementById('tap')
 
 button.addEventListener('click', showImage)
 
