@@ -55,3 +55,26 @@ button.addEventListener('mouseleave', () => {
     isPressed = false; 
 });
 
+// МУЛЬТИ-ТАП
+
+// document.addEventListener("DOMContentLoaded", () => {
+//     const tapZone = document.getElementById("tap");
+//     const scoreDisplay = document.getElementById("score");
+//     let score = 0;
+
+//     tapZone.addEventListener("touchstart", (event) => {
+//         // Получаем количество пальцев, которые касаются экрана
+//         const touchCount = event.touches.length;
+
+//         // Увеличиваем очки в зависимости от количества пальцев
+//         score += touchCount;
+//         scoreDisplay.textContent = score;
+//     });
+
+//     // Предотвращаем прокрутку при касании
+//     tapZone.addEventListener("touchmove", (event) => {
+//         event.preventDefault();
+//     });
+// });
+
+
