@@ -228,30 +228,32 @@ footer {
 }
 
 @media (max-width: 480px) {
-    header {
-        padding: 2%;
-    }
-
-    .t1, .t2 {
-        font-size: 0.8em;
-        padding: 5px;
+    .back, .t1, .t2, header, section, footer {
+        width: 100%;
+        max-width: 100vw;
+        overflow-x: hidden;
+        padding: 0;
+        box-sizing: border-box;
     }
 
     .tap {
-        height: 150px;
-        width: 150px;
+        width: 90%;
+        max-width: 100vw;
+        height: auto;
     }
 
-    #count {
-        font-size: 1.2rem;
-    }
-
-    .option {
-        font-size: 20px;
-        padding: 15px 40px;
+    .t1, .t2, .option {
+        font-size: 1em;
+        padding: 5px;
     }
 
     .title {
-        font-size: 25px;
+        font-size: 24px;
+    }
+
+    #count {
+        font-size: 1.5rem;
+        top: 15%;
     }
 }
+
