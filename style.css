@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -6,13 +6,13 @@
     font-family: "Oswald", sans-serif;
 }
 
-body{
+body {
     background-color: rgba(27, 27, 27);
     user-select: none;
     /* overflow: hidden; */
 }
 
-.back{
+.back {
     position: absolute;
     top: 50%;
     left: 7%;
@@ -20,13 +20,13 @@ body{
     padding: 20px;
 }
 
-a{
+a {
     text-decoration: none;
     color: white;
     cursor: pointer;
 }
 
-header{
+header {
     position: relative;
     display: flex;
     margin: 0 auto;
@@ -39,7 +39,7 @@ header{
     box-shadow: 0 5px 25px rgba(255, 174, 0, 0.559);
 }
 
-.t1{
+.t1 {
     margin: 0 auto;
     display: flex;
     align-items: center;
@@ -51,17 +51,17 @@ header{
     background-color: rgb(247, 121, 43);
 }
 
-.t1:active{
+.t1:active {
     background-color: rgba(27, 27, 27);
     color: white;
 }
 
-.t1:hover{
+.t1:hover {
     /* background-color: rgba(255, 145, 0); */
     box-shadow: 0px 0px 20px rgba(255, 89, 0, 0.901);
 }
 
-.t2{
+.t2 {
     margin: 0 auto;
     display: flex;
     align-items: center;
@@ -72,15 +72,15 @@ header{
     color: rgba(245, 245, 220, 0.662);
 }
 
-.friends{
+.friends {
     border-right: 1px solid white;
 }
 
-.tasks{
+.tasks {
     border-left: 1px solid white;
 }
 
-section{
+section {
     position: absolute;
     left: 50%;
     top: 50%;
@@ -96,7 +96,7 @@ section{
     transform: translateX(-50%);
 }
 
-.tap{
+.tap {
     position: relative;
     background: none;
     border: none;
@@ -108,12 +108,12 @@ section{
     cursor: url(./images/free-icon-hand-2550507.png), auto;
 }
 
-.tap:active{
+.tap:active {
     height: 370px;
     width: 370px;
 }
 
-.taptap{
+.taptap {
     width: 100%;
     height: auto;
     -webkit-touch-callout: none;
@@ -123,7 +123,7 @@ section{
     user-select: none;
 }
 
-footer{
+footer {
     position: absolute;
     bottom: 0;
     width: 100%;
@@ -139,7 +139,7 @@ footer{
     box-shadow: 0px 0px 25px rgba(255, 255, 255, 0.559);
 }
 
-#overlay{
+#overlay {
     position: absolute;
     opacity: 0;
     transform: scale(0);
@@ -147,31 +147,31 @@ footer{
     visibility: hidden;
 }
 
-#overlay.visible{
+#overlay.visible {
     transform: scale(1);
     visibility: visible;
     opacity: 1;
     transition: transform 0.5s ease, opacity 0.5s ease;
 }
 
-#overlay img{
+#overlay img {
     height: 50px;
     width: 50px;
 }
 
-.title{
+.title {
     font-size: 37px;
     color: white;
 }
 
-.options{
+.options {
     position: relative;
     display: flex;
     flex-direction: column;
     gap: 60px;
 }
 
-.option{
+.option {
     font-size: 30px;
     padding: 30px 100px;
     border-radius: 15px;
@@ -180,12 +180,12 @@ footer{
     transition: 0.3s;
 }
 
-.option:hover{
+.option:hover {
     background-color: rgb(255, 255, 255);
     color: black;
 }
 
-.option:active{
+.option:active {
     background-color: black;
     border: 3px solid rgb(255, 145, 0);
     color: white;
@@ -193,4 +193,65 @@ footer{
 
 .light {
     background-color: rgb(255, 193, 37);
+}
+
+
+@media (max-width: 768px) {
+    header {
+        /* flex-direction: column; */
+        padding: 3%;
+    }
+
+    .t1, .t2 {
+        padding: 10px;
+        gap: 2px;
+        font-size: 0.9em;
+    }
+
+    .tap {
+        height: 200px;
+        width: 200px;
+    }
+
+    #count {
+        font-size: 1.5rem;
+    }
+
+    .option {
+        font-size: 25px;
+        padding: 20px 60px;
+    }
+
+    .title {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 2%;
+    }
+
+    .t1, .t2 {
+        font-size: 0.8em;
+        padding: 5px;
+    }
+
+    .tap {
+        height: 150px;
+        width: 150px;
+    }
+
+    #count {
+        font-size: 1.2rem;
+    }
+
+    .option {
+        font-size: 20px;
+        padding: 15px 40px;
+    }
+
+    .title {
+        font-size: 25px;
+    }
 }
