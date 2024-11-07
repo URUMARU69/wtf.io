@@ -9,6 +9,7 @@
 body {
     background-color: rgba(27, 27, 27);
     user-select: none;
+    overflow: hidden;
     /* overflow: hidden; */
 }
 
