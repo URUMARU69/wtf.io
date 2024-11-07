@@ -131,7 +131,7 @@ footer {
 /*     padding: 2%; */
     display: flex;
     margin: 0 auto;
-    justify-content: center;
+/*     justify-content: center; */
     align-items: center;
     justify-content:space-between;
 /*     gap: 40px; */
