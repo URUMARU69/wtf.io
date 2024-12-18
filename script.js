@@ -55,18 +55,22 @@ button.addEventListener('mouseleave', () => {
     isPressed = false; 
 });
 
-// Add this script to the main JavaScript file or include in the HTML to enable scroll adjustment on mobile
-
 document.addEventListener('DOMContentLoaded', function () {
-    // Check if the device is a mobile device
-    if (/Mobi|Android/i.test(navigator.userAgent)) {
-        // Scroll the window by the equivalent of 5 ctrl-scroll steps (e.g., 500px)
-        window.scrollTo({
-            top: 500, // Adjust this value based on your design
-            behavior: 'smooth', // Smooth scrolling effect
-        });
+    // Проверяем, открыта ли страница через Telegram
+    const isTelegram = /Telegram/i.test(navigator.userAgent);
+
+    if (isTelegram) {
+        // Устанавливаем масштаб страницы, чтобы избежать бага с нижним скроллом
+        document.body.style.transform = 'scale(1.01)';
+        document.body.style.transformOrigin = 'top left';
+
+        // Возвращаем нормальный масштаб через небольшой таймаут
+        setTimeout(() => {
+            document.body.style.transform = 'scale(1)';
+        }, 50);
     }
 });
+
 
 
 // МУЛЬТИ-ТАП
