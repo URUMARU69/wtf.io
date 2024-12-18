@@ -55,6 +55,20 @@ button.addEventListener('mouseleave', () => {
     isPressed = false; 
 });
 
+// Add this script to the main JavaScript file or include in the HTML to enable scroll adjustment on mobile
+
+document.addEventListener('DOMContentLoaded', function () {
+    // Check if the device is a mobile device
+    if (/Mobi|Android/i.test(navigator.userAgent)) {
+        // Scroll the window by the equivalent of 5 ctrl-scroll steps (e.g., 500px)
+        window.scrollTo({
+            top: 500, // Adjust this value based on your design
+            behavior: 'smooth', // Smooth scrolling effect
+        });
+    }
+});
+
+
 // МУЛЬТИ-ТАП
 
 // document.addEventListener("DOMContentLoaded", () => {
