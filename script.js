@@ -56,18 +56,8 @@ button.addEventListener('mouseleave', () => {
 });
 
 document.addEventListener('DOMContentLoaded', function () {
-    // Проверяем, открыта ли страница через Telegram
-    const isTelegram = /Telegram/i.test(navigator.userAgent);
-
-    if (isTelegram) {
-        // Устанавливаем масштаб страницы, чтобы избежать бага с нижним скроллом
-        document.body.style.transform = 'scale(1.01)';
-        document.body.style.transformOrigin = 'top left';
-
-        // Возвращаем нормальный масштаб через небольшой таймаут
-        setTimeout(() => {
-            document.body.style.transform = 'scale(1)';
-        }, 50);
+    if (/Telegram/i.test(navigator.userAgent)) {
+        document.body.style.zoom = '0.7'; // Принудительное уменьшение масштаба
     }
 });
 
